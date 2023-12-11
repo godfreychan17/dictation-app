@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainLayoutPadding">10dp</dimen>
+
+    <dimen name="testSettingViewTopBarHeight">50dp</dimen>
+    <dimen name="testSettingViewBottomBarHeight">50dp</dimen>
+    <dimen name="itemWordViewHeight">50dp</dimen>
+    <dimen name="itemWordTxtViewHeight">35dp</dimen>
+</resources>

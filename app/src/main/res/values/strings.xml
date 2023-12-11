@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">dictation-app</string>
+    <string name="mainStartBtnTitle">Start Test</string>
 </resources>
