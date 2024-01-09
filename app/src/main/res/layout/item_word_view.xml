@@ -8,18 +8,10 @@
         android:id="@+id/wordItemTextField"
         android:layout_width="match_parent"
         android:layout_height="@dimen/itemWordTxtViewHeight"
+        android:hint="Enter word"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/wordItemTextField"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center_horizontal"
-        android:text="Enter the word"
-        android:textSize="12sp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

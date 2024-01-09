@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
 
-
         <activity android:name=".activity.wordsetting.WordSettingActivity"/>
+        <activity android:name=".activity.textdictation.TextDictationActivity"/>
+        <activity android:name=".activity.result.ResultActivity"/>
     </application>
 
 </manifest>

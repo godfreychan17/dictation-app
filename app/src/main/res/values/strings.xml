@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">dictation-app</string>
     <string name="mainStartBtnTitle">Start Test</string>
+    <string name="confirmBtnTitle">Confirm</string>
+    <string name="previousBtnTitle">Previous</string>
+    <string name="nextBtnTitle">Next</string>
+    <string name="endDictationBtnTitle">End Test</string>
+    <string name="doneBtnTitle">Done</string>
+    <string name="retryBtnTitle">Retry</string>
 </resources>
