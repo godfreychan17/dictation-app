@@ -2,16 +2,25 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/itemWordViewHeight"
+    android:background="@color/cardview_shadow_start_color"
+    android:padding="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <EditText
         android:id="@+id/wordItemTextField"
         android:layout_width="match_parent"
         android:layout_height="@dimen/itemWordTxtViewHeight"
-        android:hint="Enter word"
-        android:textColor="@color/black"
+        android:hint="@string/wordItemsTxtFieldHints"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@color/wordItemBGColor"
+        android:textColorHint="@color/gary"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:lines="1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

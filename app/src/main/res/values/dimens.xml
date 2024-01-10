@@ -6,7 +6,7 @@
     <dimen name="topBarHeight">50dp</dimen>
     <dimen name="bottomBarHeight">60dp</dimen>
     <dimen name="itemWordViewHeight">50dp</dimen>
-    <dimen name="itemWordTxtViewHeight">35dp</dimen>
+    <dimen name="itemWordTxtViewHeight">45dp</dimen>
 
     <dimen name="generalHeaderTextSize">36sp</dimen>
     <dimen name="dictationComponentVerticalMargin">10dp</dimen>

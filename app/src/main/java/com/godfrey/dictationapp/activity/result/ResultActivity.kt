@@ -1,7 +1,7 @@
 package com.godfrey.dictationapp.activity.result
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivitysssssssssssssss
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.godfrey.dictationapp.R
 

@@ -2,7 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gary">#444444</color>
 
     <color name="viewBGColor">#d7dadb</color>
     <color name="bottomBarBGColor">#327da8</color>
+    <color name="wordItemBGColor">#216c07</color>
 </resources>
