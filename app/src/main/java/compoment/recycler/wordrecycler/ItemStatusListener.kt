@@ -1,5 +1,7 @@
 package compoment.recycler.wordrecycler
 
 interface ItemStatusListener {
-    fun onWordChange(word: String, item: WordItem)
+
+    fun onWordUpdate(word: String, item: WordItem)
+    fun onWordFinishChange(word: String, item: WordItem)
 }

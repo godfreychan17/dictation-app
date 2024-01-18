@@ -8,4 +8,10 @@ data class WordSettingModel(
 ) {
     val alertMsgWordEmpty = R.string.alertMsgWordCantBeEmpty
     val alertOkBtn = R.string.alertOkBtn
+    var wordListStatus = WordListStatus.Idle
+
+    enum class WordListStatus {
+        Idle,
+        FinishInput,
+    }
 }
