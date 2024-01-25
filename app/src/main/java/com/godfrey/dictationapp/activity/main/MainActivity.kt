@@ -4,8 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+
 import com.godfrey.dictationapp.R
 import com.godfrey.dictationapp.activity.wordsetting.WordSettingActivity
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,3 +26,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+

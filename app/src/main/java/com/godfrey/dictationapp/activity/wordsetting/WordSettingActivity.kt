@@ -4,9 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
-import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -17,7 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.godfrey.dictationapp.R
-import com.godfrey.dictationapp.activity.textdictation.TextDictationActivity
+import com.godfrey.dictationapp.activity.worddictation.WordDictationActivity
 import compoment.recycler.wordrecycler.ItemStatusListener
 import compoment.recycler.wordrecycler.WordItem
 import compoment.recycler.wordrecycler.WordViewAdapter
@@ -58,8 +56,10 @@ class WordSettingActivity : AppCompatActivity(), ItemStatusListener, ViewTreeObs
                     }
                 }
 
-                WordSettingViewCommand.ProcessToTextDictationActivityCommand -> {
-                    startActivity(Intent(this, TextDictationActivity::class.java))
+                is WordSettingViewCommand.ProcessToTextDictationActivityCommand -> {
+                    val intent = Intent(this, WordDictationActivity::class.java)
+                    intent.putExtra("Words", it.wordList)
+                    startActivity(intent)
                 }
             }
         }

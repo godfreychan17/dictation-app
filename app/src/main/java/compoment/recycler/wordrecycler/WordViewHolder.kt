@@ -3,6 +3,7 @@ package compoment.recycler.wordrecycler
 import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -10,6 +11,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import com.godfrey.dictationapp.R
+import java.lang.reflect.Method
 
 class WordViewHolder(itemView: View, mListener: ItemStatusListener) : RecyclerView.ViewHolder(itemView) {
     private val wordEditTextView: EditText = itemView.findViewById(R.id.wordItemTextField)

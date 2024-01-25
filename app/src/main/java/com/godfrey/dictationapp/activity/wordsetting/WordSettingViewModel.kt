@@ -72,8 +72,15 @@ class WordSettingViewModel : ViewModel() {
         wordSettingViewModel.wordList.add(WordItem())
     }
 
+    private fun shuffleWordList() : ArrayList<String>{
+        val wordList = (wordSettingViewModel.wordList.filter { it.type == WordItem.ItemType.Word}.map { it.word } as ArrayList)
+        wordList.shuffled()
+        return wordList
+    }
+
     fun didPressConfirmBtn() {
-        _observer.postValue(WordSettingViewCommand.ProcessToTextDictationActivityCommand)
+        val shuffledWordList = shuffleWordList()
+        _observer.postValue(WordSettingViewCommand.ProcessToTextDictationActivityCommand(shuffledWordList))
     }
 
     fun onWordListRecyclerViewFinishUpdate() {

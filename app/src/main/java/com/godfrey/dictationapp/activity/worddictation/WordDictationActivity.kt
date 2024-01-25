@@ -1,17 +1,15 @@
-package com.godfrey.dictationapp.activity.textdictation
+package com.godfrey.dictationapp.activity.worddictation
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.godfrey.dictationapp.R
 import com.godfrey.dictationapp.activity.result.ResultActivity
 
-class TextDictationActivity : AppCompatActivity() {
-    private lateinit var textDictationViewModel: TextDictationViewModel
+class WordDictationActivity : AppCompatActivity() {
+    private lateinit var wordDictationViewModel: WordDictationViewModel
 
     private lateinit var playWordBtn: Button
     private lateinit var previousBtn: Button
@@ -23,10 +21,10 @@ class TextDictationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_textdictation)
         initUI()
 
-        textDictationViewModel = ViewModelProvider(this)[TextDictationViewModel::class.java]
-        textDictationViewModel.observer.observe(this) {
+        wordDictationViewModel = ViewModelProvider(this)[WordDictationViewModel::class.java]
+        wordDictationViewModel.observer.observe(this) {
             when (it) {
-                TextDictationViewCommand.FinishDictationCommand -> {
+                WordDictationViewCommand.FinishDictationCommand -> {
                     startActivity(Intent(this, ResultActivity::class.java))
                 }
             }
@@ -40,7 +38,7 @@ class TextDictationActivity : AppCompatActivity() {
 
         nextBtn = findViewById(R.id.dictationNextBtn)
         nextBtn.setOnClickListener {
-            textDictationViewModel.didPressNextBtn()
+            wordDictationViewModel.didPressNextBtn()
         }
         quitDictationBtn = findViewById(R.id.dictationEndTestBtn)
     }
