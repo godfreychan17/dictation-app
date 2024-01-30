@@ -4,7 +4,8 @@
     <dimen name="generalPadding">10dp</dimen>
 
     <dimen name="topBarHeight">50dp</dimen>
-    <dimen name="bottomBarHeight">60dp</dimen>
+    <dimen name="topBarPadding">5dp</dimen>
+    <dimen name="bottomBarHeight">50dp</dimen>
     <dimen name="itemWordViewHeight">50dp</dimen>
     <dimen name="itemWordTxtViewHeight">45dp</dimen>
 

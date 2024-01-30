@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.godfrey.dictationapp.R
+import com.godfrey.dictationapp.activity.util.AppConstant
 import com.godfrey.dictationapp.activity.worddictation.WordDictationActivity
 import compoment.recycler.wordrecycler.ItemStatusListener
 import compoment.recycler.wordrecycler.WordItem
@@ -58,7 +59,7 @@ class WordSettingActivity : AppCompatActivity(), ItemStatusListener, ViewTreeObs
 
                 is WordSettingViewCommand.ProcessToTextDictationActivityCommand -> {
                     val intent = Intent(this, WordDictationActivity::class.java)
-                    intent.putExtra("Words", it.wordList)
+                    intent.putExtra(AppConstant.intentWordListKey, it.wordList.toTypedArray())
                     startActivity(intent)
                 }
             }

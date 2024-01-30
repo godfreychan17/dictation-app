@@ -72,10 +72,9 @@ class WordSettingViewModel : ViewModel() {
         wordSettingViewModel.wordList.add(WordItem())
     }
 
-    private fun shuffleWordList() : ArrayList<String>{
-        val wordList = (wordSettingViewModel.wordList.filter { it.type == WordItem.ItemType.Word}.map { it.word } as ArrayList)
-        wordList.shuffled()
-        return wordList
+    private fun shuffleWordList() : List<String>{
+        val wordList = arrayListOf("String", "Word", "Help", "Happy", "Good", "Communication")// (wordSettingViewModel.wordList.filter { it.type == WordItem.ItemType.Word}.map { it.word } as ArrayList)
+        return wordList.shuffled()
     }
 
     fun didPressConfirmBtn() {
