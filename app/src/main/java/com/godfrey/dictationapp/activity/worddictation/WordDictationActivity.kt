@@ -42,8 +42,10 @@ class WordDictationActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         wordDictationViewModel = ViewModelProvider(this)[WordDictationViewModel::class.java]
         wordDictationViewModel.observer.observe(this) {
             when (it) {
-                WordDictationViewCommand.FinishDictationCommand -> {
-                    startActivity(Intent(this, ResultActivity::class.java))
+                is WordDictationViewCommand.FinishDictationCommand -> {
+                    val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra(AppConstant.intentWordListKey, it.wordList.toTypedArray())
+                    startActivity(intent)
                 }
 
                 is WordDictationViewCommand.RefreshViewCommand -> {

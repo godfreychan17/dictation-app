@@ -16,6 +16,7 @@ class WordDictationViewModel : ViewModel() {
             WordDictationModel()
         }
         model.reset()
+        _observer.postValue(WordDictationViewCommand.RefreshViewCommand(model.currentIndex, model.wordList.size))
     }
 
     fun onInitTextToSpeechMissingLanguage(langName: String) {
@@ -30,11 +31,10 @@ class WordDictationViewModel : ViewModel() {
 
     }
 
-
     fun didPressNextBtn() {
         model.currentIndex += 1
         if (model.currentIndex >= model.wordList.size) {
-            _observer.postValue(WordDictationViewCommand.FinishDictationCommand)
+            _observer.postValue(WordDictationViewCommand.FinishDictationCommand(model.wordList))
         } else {
             _observer.postValue(WordDictationViewCommand.RefreshViewCommand(model.currentIndex, model.wordList.size))
         }

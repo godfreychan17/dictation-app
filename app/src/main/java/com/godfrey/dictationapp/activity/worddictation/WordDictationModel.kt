@@ -3,7 +3,7 @@ package com.godfrey.dictationapp.activity.worddictation
 import kotlinx.coroutines.processNextEventInCurrentThread
 
 data class WordDictationModel(
-    val wordList: List<String> = listOf(),
+    var wordList: List<String> = listOf()
 ) {
     var currentIndex = 0
 

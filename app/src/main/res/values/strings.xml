@@ -10,6 +10,7 @@
     <string name="retryBtnTitle">Retry</string>
     <string name="wordSettingActivityTitle">Please input the words below</string>
     <string name="wordItemsTxtFieldHints">Word for test</string>
+    <string name="resultActivityTitle">Result</string>
     <string name="alertMsgWordCantBeEmpty">The word should not be empty</string>
     <string name="alertOkBtn">OK</string>
 </resources>

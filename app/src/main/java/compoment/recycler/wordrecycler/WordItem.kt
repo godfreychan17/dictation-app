@@ -6,5 +6,6 @@ data class WordItem(
     enum class ItemType {
         Empty,
         Word,
+        DisplayOnly,
     }
 }

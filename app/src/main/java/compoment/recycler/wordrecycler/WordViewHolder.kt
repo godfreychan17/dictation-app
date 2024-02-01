@@ -43,10 +43,20 @@ class WordViewHolder(itemView: View, mListener: ItemStatusListener) : RecyclerVi
 
     fun updateContent(item: WordItem) {
         wordEditTextView.tag = item
-        if (item.type == WordItem.ItemType.Word) {
-            wordEditTextView.setText(item.word)
-        } else {
-            wordEditTextView.setText("")
+        when (item.type) {
+            WordItem.ItemType.Word -> {
+                wordEditTextView.setText(item.word)
+                wordEditTextView.isEnabled = true
+            }
+
+            WordItem.ItemType.Empty -> {
+                wordEditTextView.setText("")
+                wordEditTextView.isEnabled = true
+            }
+            WordItem.ItemType.DisplayOnly -> {
+                wordEditTextView.setText(item.word)
+                wordEditTextView.isEnabled = false
+            }
         }
     }
 

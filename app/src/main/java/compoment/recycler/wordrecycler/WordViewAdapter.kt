@@ -7,6 +7,7 @@ import com.godfrey.dictationapp.R
 
 class WordViewAdapter(private var mListener: ItemStatusListener) : RecyclerView.Adapter<WordViewHolder>() {
     private var itemList = arrayListOf<WordItem>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.item_word_view, parent, false)

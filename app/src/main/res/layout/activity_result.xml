@@ -6,8 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:id="@+id/resultTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topBarHeight"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/resultActivityTitle"
+            />
+    </RelativeLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/wordSettingRecyclerView"
+        android:id="@+id/resultRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="@dimen/generalPadding"
@@ -29,12 +45,14 @@
         >
 
         <Button
+            android:id="@+id/resultFinishBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/doneBtnTitle"
+            android:text="@string/finishBtnTitle"
             />
 
         <Button
+            android:id="@+id/resultRetryBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/retryBtnTitle"
